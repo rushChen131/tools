@@ -23,7 +23,8 @@ public class NioWriter {
         }
         buffer= ByteBuffer.allocate(1024*8);
         buffer.clear();
-        s = s.trim() + lineSeparator;
+//        s = s.trim() + lineSeparator;
+        s = s + lineSeparator;
         byte[] bytes = s.getBytes();
         buffer.put(bytes);
         buffer.flip();
